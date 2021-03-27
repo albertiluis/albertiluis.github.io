@@ -15,13 +15,10 @@ function cardMount() {
 
             var feed = ''
 
-            for(let i = 0; i < data.data.length; i++) {
-                
-            }
             data.data.slice(0, 8).forEach((element) => {
                 
                     if (element.media_type === 'IMAGE' || element.media_type === 'CAROUSEL_ALBUM') {
-                        feed += `<div class="col-md-3">
+                        feed += `<div class="col-6 col-md-3">
                                     <div class="card mb-3">
                                         <img class="card-img-top" id="instaImage" src="${element.media_url}" alt="Card image cap">
                                         <div class="card-body" >
@@ -32,6 +29,7 @@ function cardMount() {
                     }
              console.log(element)
             })
+
             card.innerHTML = feed
 
         })
